@@ -1,0 +1,31 @@
+	mov r3,#0
+	mov r5,#10
+some:
+	sub r5,r5,#1
+	bl fib
+	mov r2,r1
+	add r1,r0,r1
+	mov r0,r2
+	sub r3,r3,#4
+	cmp r3,#0
+	blt exit
+	ldr lr,[r3]
+	mov pc,lr
+fib:
+	str lr,[r3]
+	add r3,r3,#4
+check:
+	cmp r5,#1
+	bgt some
+	beq rone
+	blt rzero
+rone:
+	mov r1,#1
+	sub r5,r5,#1
+	b check
+rzero:
+	mov r0,#0
+	mov pc,lr
+exit:
+	mov r3,#0
+	swi 0x11

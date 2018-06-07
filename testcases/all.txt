@@ -1,0 +1,16 @@
+mov r0,#4
+mov r1,#3
+cmp r0,#2
+str r1,[r0]
+mov r1,#9
+bl heya
+mov r5,#5
+mov r6,#6
+mov r7,#7
+swi 0x11
+
+heya:
+	mov r2,#1
+	ldr r1,[r0]
+	add r0,r1,r2
+	mov pc,lr

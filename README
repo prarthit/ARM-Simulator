@@ -1,0 +1,11 @@
+The testcases are provided in the folder testcases.
+To run any testcase just bring it to the current folder containing makefile and just 
+rename it to input.txt and open terminal here and just type make.
+
+The program display total number of instructions
+CPI,IPC and total no of clock cycles
+
+
+We have a memory array of 1500 size only so use carefully.
+You can use the immediate operand in str and ldr instructions like #4 for going
+to next address like for int the program will automatically divide it and use the appropriate memory
